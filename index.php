@@ -1,7 +1,8 @@
 <?php
 
-    try {
-        $pdo = new PDO('mysql:host=localhost;dbname=php_learn', 'root', 'root');
-    } catch (PDOException $e) {
-        var_dump($e);
-    }
+$database = require 'Initializer.php';
+
+
+$tasks = $database->selectAll('tasks');
+
+var_dump($tasks);
