@@ -1,8 +1,8 @@
 <?php
 
 $config = require 'config.php';
-require 'database/Connection.php';
-require 'database/QueryBuilder.php';
+require 'core/database/Connection.php';
+require 'core/database/QueryBuilder.php';
 
 
 return new QueryBuilder (
