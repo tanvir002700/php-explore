@@ -1,11 +1,6 @@
 <?php
 
-$database = require 'core/Initializer.php';
+require 'core/Initializer.php';
 
-
-$router = new Router();
-
-require 'routes.php';
-
-require $router::load('routes.php')
+require Router::load('routes.php')
     -> direct(Request::uri());
