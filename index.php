@@ -1,6 +1,15 @@
-<?php
+<html>
+    <head>
+        <title>Mini Mvc</title>
+    </head>
+    <body>
+        <?php
 
-require 'core/Initializer.php';
+            require 'core/Initializer.php';
 
-require Router::load('routes.php')
-    -> direct(Request::uri());
+            require Router::load('routes.php')
+                -> direct(Request::uri());
+        ?>
+    </body>
+</html>
+
