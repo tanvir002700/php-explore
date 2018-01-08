@@ -5,6 +5,7 @@
     <body>
         <?php
 
+            require 'vendor/autoload.php';
             require 'core/Initializer.php';
 
             require Router::load('routes.php')
