@@ -1,6 +1,6 @@
 <?php
 
-$tasks = $app['database']->selectAll('tasks');
+$tasks = App::get('database')->selectAll('tasks');
 
 var_dump($tasks);
 
