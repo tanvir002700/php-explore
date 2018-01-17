@@ -5,14 +5,14 @@ class PagesController {
     {
         $tasks = App::get('database')->selectAll('tasks');
         var_dump($tasks);
-        require 'views/index.view.php';
+        return view('index');
     }
 
     function about() {
-        require 'views/about.view.php';
+        return view('about');
     }
 
     function contact() {
-        require 'views/contact.view.php';
+        view('contact');
     }
 }
