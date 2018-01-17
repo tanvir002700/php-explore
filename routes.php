@@ -1,6 +1,6 @@
 <?php
 
-$router->get('', 'controllers/index.php');
-$router->get('about', 'controllers/about.php');
-$router->get('contact', 'controllers/contact.php');
-$router->post('submit', 'controllers/submit.php');
+$router->get('', 'PagesController@index');
+$router->get('about', 'PagesController@about');
+$router->get('contact', 'PagesController@contact');
+$router->post('submit', 'submit.php');
