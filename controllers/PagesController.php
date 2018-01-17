@@ -1,5 +1,7 @@
 <?php
 
+use App\Core\App;
+
 class PagesController extends ApplicationController {
     function index()
     {
