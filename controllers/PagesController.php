@@ -9,7 +9,7 @@ class PagesController {
     }
 
     function about() {
-        return view('about');
+        return view('about', ['company' => 'testing']);
     }
 
     function contact() {

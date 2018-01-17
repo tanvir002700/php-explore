@@ -1,2 +1,2 @@
- <h1>this is About view</h1>
+ <h1>this is About view of <?= $company ?></h1>
 
