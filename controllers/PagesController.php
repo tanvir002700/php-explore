@@ -1,18 +1,18 @@
 <?php
 
-class PagesController {
+class PagesController extends ApplicationController {
     function index()
     {
         $tasks = App::get('database')->selectAll('tasks');
         var_dump($tasks);
-        return view('index');
+        return $this->view('index');
     }
 
     function about() {
-        return view('about', ['company' => 'testing']);
+        return $this->view('about', ['company' => 'testing']);
     }
 
     function contact() {
-        view('contact');
+        $this->view('contact');
     }
 }
