@@ -5,6 +5,9 @@
     <body>
         <?php
 
+            use App\Core\Router;
+            use App\Core\Request;
+
             require 'vendor/autoload.php';
             require 'core/Initializer.php';
 
