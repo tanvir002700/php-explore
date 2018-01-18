@@ -11,7 +11,7 @@
             require 'vendor/autoload.php';
             require 'core/Initializer.php';
 
-            Router::load('routes.php')
+            Router::load('App/routes.php')
                 -> direct(Request::uri(), Request::method());
         ?>
     </body>
