@@ -38,4 +38,20 @@ class QueryBuilder {
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
+
+    public function find_by($table, $parameter) {
+        $sql = sprintf('SELECT * FROM %s WHERE %s=(%s)',
+            $table,
+            implode(', ', array_keys($parameter)),
+            ':' . implode(', :', array_keys($parameter))
+        );
+        try{
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute($parameter);
+            return $statement->fetchAll(PDO::FETCH_CLASS);
+        } catch (\PDOException $e) {
+            throw new \Exception('Something went wrong');
+        }
+        return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
 }
