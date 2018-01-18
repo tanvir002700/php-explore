@@ -12,7 +12,7 @@ class PagesController extends ApplicationController {
     }
 
     function about() {
-        return $this->view('about', ['company' => 'testing']);
+        return $this->view('about', ['company' => 'testing company']);
     }
 
     function contact() {
