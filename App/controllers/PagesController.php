@@ -12,6 +12,7 @@ class PagesController extends ApplicationController {
     }
 
     function about() {
+        $this->layout = 'application2';
         return $this->view('about', ['company' => 'testing company']);
     }
 
